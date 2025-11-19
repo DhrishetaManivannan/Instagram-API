@@ -1,0 +1,104 @@
+
+.chatContainer {
+  color: #fff;
+  height: 490px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 8px 8px 12px;
+  border-bottom: 1px solid #333;
+}
+.headerTitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+.listitem {
+  width: 48px;
+  height: 48px;
+}
+.userList {
+
+  flex: 1;
+  overflow-y: auto;
+}
+.avatar {
+  width: 56px;
+  height: 56px;
+}
+.userMeta{
+    color: #ffffff;
+    align-items: center;
+
+}
+
+.editButton {
+  bottom: 15px;
+  left: 19rem;
+  color: #fff;
+}
+
+.userItem {
+  color: #fff !important; 
+  padding: 12px 16px !important;
+  cursor: pointer;
+  &:hover {
+    background: #333;
+    .message {
+      color: #fff;
+    }
+
+  }
+}
+
+.chatView {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #333;
+}
+
+.chatBody {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.message {
+  padding: 10px 14px;
+  border-radius: 18px;
+  max-width: 75%;
+}
+
+.them {
+  background: #3a3a3a;
+  align-self: flex-start;
+}
+
+.me {
+  background:#3797f0;
+  align-self: flex-end;
+}
+.typeMessage {
+  :global(.ant-input){
+  width : 21rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background-color: #212328 !important;
+  border: 1px solid #333;
+  color: #fff;
+}
+}
