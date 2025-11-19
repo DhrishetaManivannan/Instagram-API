@@ -1,0 +1,38 @@
+.postsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.gridItem {
+  Width: 19.40rem;   
+  height: 25rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.postMedia {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  color: #fff;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.gridItem:hover .overlay {
+  opacity: 1;
+}
