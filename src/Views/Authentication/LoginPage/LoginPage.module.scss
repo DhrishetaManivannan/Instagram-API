@@ -68,6 +68,7 @@ $placeholder-color: #a8a8a8;
   .input {
     margin-bottom: 6px;
     border-radius: 5px;
+    color: #fff;
 
     &::placeholder {
       color: $placeholder-color;

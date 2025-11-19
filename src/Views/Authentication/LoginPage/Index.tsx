@@ -1,21 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Input } from "antd";
-import { FacebookFilled,EyeTwoTone, EyeInvisibleOutlined } from "@ant-design/icons";
+import { FacebookFilled, EyeTwoTone, EyeInvisibleOutlined } from "@ant-design/icons";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./LoginPage.module.scss";
 import InstagramLogo from "../../../assets/cursiveinstagram.png";
 import LoginPreviewImage from "../../../assets/loginimage.png";
 
 const LoginPage: React.FC = () => {
-    
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setUsername(event.target.value);
+  };
+
+  const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(event.target.value);
+  };
+
   const handleLogin = () => {
- 
+    localStorage.setItem("instagram_user_id", username);
+    localStorage.setItem("instagram_access_token", password);
+
     navigate("/home");
   };
+
+  const renderPasswordIcon = (visible: boolean) => {
+    return visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />;
+  };
+
   return (
     <div className={styles.loginPage}>
-
       <main className={styles.main}>
         <section className={styles.preview}>
           <img
@@ -24,23 +40,40 @@ const LoginPage: React.FC = () => {
             className={styles.previewImage}
           />
         </section>
+
         <section className={styles.formSection}>
           <div className={styles.formBox}>
             <img src={InstagramLogo} alt="Instagram logo" className={styles.logo} />
-            <Input placeholder="Phone number, username, or email" className={styles.input} aria-label="Username or Email" />
-            <Input.Password
-            placeholder="Password"
-            className={styles.input}
-            aria-label="Password"
-            iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
+
+            <Input
+              placeholder="Phone number, username, or email"
+              className={styles.input}
+              aria-label="Username or Email"
+              value={username}
+              onChange={handleUsernameChange}
             />
 
-            <Button type="primary" block className={styles.loginButton}  onClick={handleLogin}>
+            <Input.Password
+              placeholder="Password"
+              className={styles.input}
+              aria-label="Password"
+              iconRender={renderPasswordIcon}
+              value={password}
+              onChange={handlePasswordChange}
+            />
+            <Button
+              type="primary"
+              block
+              className={styles.loginButton}
+              onClick={handleLogin}
+            >
               Log in
             </Button>
+
             <div className={styles.divider}>
               <span>OR</span>
             </div>
+
             <Button
               type="link"
               icon={<FacebookFilled className={styles.fbIcon} />}
@@ -53,6 +86,7 @@ const LoginPage: React.FC = () => {
               Forgot password?
             </Link>
           </div>
+
           <div className={styles.signupBox}>
             <p>
               Don't have an account?{" "}
@@ -63,6 +97,7 @@ const LoginPage: React.FC = () => {
           </div>
         </section>
       </main>
+
       <footer className={styles.footer}>
         <nav className={styles.footerNav}>
           {[

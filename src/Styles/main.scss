@@ -126,7 +126,35 @@ a {
     color: #fff !important;
   }
 }
-
+.ant-message {
+  z-index: 10000 !important;
+}
 .ant-layout {
   background-color: var(--color-bg) !important;
 }
+  .ant-input {
+    background-color: #00000000;
+    
+  }
+
+  .ant-modal-content {
+    height: 513px;
+    width: 360px;
+    left: 60px;
+    top: 219px;
+    background: #212328 !important;
+    border-radius: 10px!important;
+    overflow: hidden;
+    padding: 10px !important;
+  }
+   .ant-list-item-meta-title {
+        color: #fff !important;
+    }
+    .ant-list-item-meta-description{
+        color: #fff !important;
+
+    }
+
+      .ant-list {
+                  height: 30rem;
+            }
