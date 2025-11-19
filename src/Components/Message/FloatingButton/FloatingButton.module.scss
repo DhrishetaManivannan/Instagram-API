@@ -1,0 +1,47 @@
+.floatingButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #212328;
+  color: #fff;
+  border: none;
+  border-radius: 9999px; 
+  padding: 10px 18px;
+  min-width: 251px;
+  height: 56px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  font-family: "Inter", sans-serif;
+
+  &:hover {
+    background-color: #2b2b2b;
+    transform: scale(1.05);
+  }
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 22px;
+  color: #fff;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.avatar {
+  border: 2px solid #2c2c2c;
+}
+.badge{
+    margin-top: 1px;
+}

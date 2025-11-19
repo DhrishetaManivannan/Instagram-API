@@ -1,0 +1,181 @@
+
+$box-width: 330px;
+$padding-vertical: 10px;
+$color-bg: #000;
+$color-text: #fff;
+$color-muted: #a8a8a8;
+$color-blue: #4a5df9;
+
+$placeholder-color: #a8a8a8;
+
+.signupContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-bg);
+  color: var(--color-text);
+  height: 100vh;
+  justify-content: center;
+  font-family: var(--font-base);
+  padding: 20px 0;
+}
+
+.signupBox {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: 40px $padding-vertical;
+  width: $box-width;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+.instagramLogoImage {
+  width: 190px; 
+  height: auto;
+  margin-bottom: 20px;
+
+}
+
+.subtext {
+  color: var(--color-text-muted);
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.facebookButton {
+  width: 90%;
+  border-radius: 8px;
+  background-color: var(--color-primary) !important;
+  font-weight: 600 !important;
+  height: 30px;
+  font-size: 14px;
+}
+
+.orDivider {
+  display: flex;
+  align-items: center;
+  color: var(--color-text-muted);
+  margin: 18px 0;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  span {
+    padding: 0 18px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--color-border);
+  }
+}
+
+.inputGroup {
+  margin-bottom: 15px;
+  width: 17rem;
+  margin-left: 26px;
+  border-color: #d0caca;
+}
+
+.input {
+  margin-bottom: 6px;
+  
+  &::placeholder {
+    color: var(--color-text-muted);
+    opacity: 0.6;
+  }
+}
+
+.contactInfo {
+  font-size: 12px;
+  line-height: 1.3;
+  color: #a8a8a8;
+  margin-bottom: 15px;
+  padding: 0 20px;
+  
+  a {
+    color: #a8a8a8;
+    font-weight: 500;
+  }
+}
+.terms {
+  font-size: 12px;
+  line-height: 1.3;
+  color: #a8a8a8;
+  margin-bottom: 15px;
+  padding: 0 20px;
+  
+  a {
+    color: #a8a8a8;
+    font-weight: 500;
+  }
+}
+
+.signupButton {
+  width: 90%;
+  border-radius: 8px;
+  background-color: var(--color-primary) !important;
+  font-weight: 600 !important;
+  height: 30px;
+  font-size: 14px;
+}
+
+.loginBox {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: 20px;
+  text-align: center;
+  width: $box-width;
+  font-size: 14px;
+
+  .loginLink {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+}
+.footer {
+  width: 100%;
+  max-width: 70rem;
+  margin-top: 50px;
+  padding: 0 16px 20px;
+  text-align: center;
+
+  @media (max-width: 875px) {
+    margin-top: 20px;
+  }
+}
+
+.footerNav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 12px;
+
+  a {
+    color: $color-muted;
+    font-size: 12px;
+  }
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 12px;
+  color: $color-muted;
+}
+
+.languageSelect {
+  background: transparent;
+  border: none;
+  color: $color-muted;
+  font-size: 12px;
+  cursor: pointer;
+}
