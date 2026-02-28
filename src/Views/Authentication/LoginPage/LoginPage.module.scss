@@ -1,0 +1,188 @@
+$color-bg: #000;
+$color-text: #fff;
+$color-border: #262626;
+$color-muted: #8e8e8e;
+$color-blue: #4a5df9;
+$box-width: 350px;
+$placeholder-color: #a8a8a8;
+
+.loginPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: $color-bg;
+  color: $color-text;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  padding-top: 50px;
+
+  @media (max-width: 875px) {
+    padding-top: 12px;
+  }
+}
+.preview {
+  width: 440px;
+  height: 580px;
+  margin-right: 32px;
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: 875px) {
+    display: none;
+  }
+
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 450px) {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+.formBox {
+  background: $color-bg;
+  padding: 40px;
+  
+  width: $box-width;
+  text-align: center;
+  margin-bottom: 10px;
+
+  .logo {
+    width: 175px;
+    margin-bottom: 30px;
+  }
+
+  .input {
+    margin-bottom: 6px;
+    border-radius: 5px;
+    color: #fff;
+
+    &::placeholder {
+      color: $placeholder-color;
+    }
+  }
+
+  .loginButton {
+    margin-top: 8px;
+    background-color: $color-blue !important;
+    font-weight: 600 !important;
+    border-radius: 8px;
+    height: 30px;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    color: $color-muted;
+    margin: 20px 0;
+    font-size: 13px;
+    font-weight: 600;
+
+    span {
+      padding: 0 18px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: $color-border;
+    }
+  }
+
+  .fbButton {
+    color: $color-blue !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+
+    &:hover {
+      color: #4a5df9
+    }
+
+    .fbIcon {
+      margin-right: 8px;
+      font-size: 16px;
+    }
+  }
+
+  .forgotPassword {
+    display: block;
+    font-size: 12px;
+    color: $color-muted;
+    margin-top: 12px;
+  }
+}
+
+.signupBox {
+  background: $color-bg;
+  
+  padding: 20px;
+  width: $box-width;
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+
+    .signupLink {
+      color: $color-blue;
+      font-weight: 600;
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  max-width: 70rem;
+  margin-top: 50px;
+  padding: 0 16px 20px;
+  text-align: center;
+
+  @media (max-width: 875px) {
+    margin-top: 20px;
+  }
+}
+
+.footerNav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 12px;
+
+  a {
+    color: $color-muted;
+    font-size: 12px;
+  }
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 12px;
+  color: $color-muted;
+}
+
+.languageSelect {
+  background: transparent;
+  border: none;
+  color: $color-muted;
+  font-size: 12px;
+  cursor: pointer;
+}

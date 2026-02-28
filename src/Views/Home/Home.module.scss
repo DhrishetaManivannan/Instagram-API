@@ -1,0 +1,16 @@
+.home {
+  padding-left: 20rem;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  color: var(--color-text);
+  position: relative;
+
+  &__main {
+    flex: 1;
+    max-width: 600px;
+    margin: 0 32px;
+    padding-top: 20px;
+  }
+}
